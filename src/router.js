@@ -4,7 +4,7 @@ import * as Views from './components';
 
 export default () => (
     <Router history={browserHistory}>
-        <Route path="/" component={Views.App}>
+        <Route path="/" component={Views.Layout}>
             <IndexRedirect to="/home" />
             
             <Route path="home" component={Views.Home} />

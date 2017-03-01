@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Header } from './fragments';
 
-export const App = ({ children }) => (
+export const Layout = ({ children }) => (
   <div>
     <header>
       <Header />
