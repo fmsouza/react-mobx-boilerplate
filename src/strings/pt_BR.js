@@ -8,10 +8,12 @@ export default {
         navmenu: {
             link: {
                 increment: 'Incrementar',
-                reset: 'Resetar'
+                reset: 'Resetar',
+                login: 'Entrar'
             }
         }
     },
+
     home: {
         title: 'Seja bem-vindo ao React',
         intro: count => (
@@ -22,5 +24,22 @@ export default {
                     Contagem: {count}
                 </span>
             )
+    },
+    
+    login: {
+        title: 'Login',
+        inputs: {
+            username: {
+                label: 'Usuário',
+                placeholder: 'ultralord@gmail.com'
+            },
+            password: {
+                label: 'Senha',
+                placeholder: '*********'
+            },
+            submitButton: {
+                label: 'Entrar'
+            }
+        }
     }
 };

@@ -8,6 +8,7 @@ export default () => (
             <IndexRedirect to="/home" />
             
             <Route path="home" component={Views.Home} />
+            <Route path="login" component={Views.Login} />
 
             <Route path="400" component={Views.Forbidden} />
             <Route path="*" component={Views.NotFound} />
