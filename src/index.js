@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'mobx-react';
 import Router from './router';
+import * as stores from './stores';
 
-ReactDOM.render(
-  <Router />,
-  document.getElementById('root')
+const Application = () => (
+  <Provider {...stores}>
+    <Router/>
+  </Provider>
 );
+
+ReactDOM.render(<Application/>, document.getElementById('root'));
