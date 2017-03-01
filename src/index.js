@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider} from 'mobx-react';
+import { Provider } from 'mobx-react';
 import Router from './router';
 import * as stores from './stores';
 
 const Application = () => (
-  <Provider {...stores}>
+  <Provider { ...stores }>
     <Router/>
   </Provider>
 );

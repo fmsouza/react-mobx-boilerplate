@@ -8,8 +8,12 @@ export class CounterStore {
         return this.counter;
     }
 
-    @action click() {
+    @action increment() {
         this.counter++;
+    }
+
+    @action reset() {
+        this.counter = 0;
     }
 }
 
