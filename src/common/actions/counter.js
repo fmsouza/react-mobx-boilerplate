@@ -1,5 +1,4 @@
-import Stores from 'stores';
-
+import Stores from 'common/stores';
 
 const { counterStore } = Stores;
 

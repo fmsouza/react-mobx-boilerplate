@@ -1,9 +1,9 @@
 import React from 'react';
 import { inject, observer } from 'mobx-react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Text from 'common/strings';
 import logo from './logo.svg';
 import './home.css';
-import Text from 'strings';
 
 @inject('counterStore')
 @observer

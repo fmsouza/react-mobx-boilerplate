@@ -1,4 +1,4 @@
-import { pt_BR, en_US } from './strings';
+import { pt_BR, en_US } from 'common/strings';
 
 export default locale => {
     switch (locale) {

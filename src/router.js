@@ -1,6 +1,6 @@
 import React from 'react';
 import { IndexRedirect, Router, Route, browserHistory } from 'react-router';
-import * as Views from './components';
+import * as Views from 'components';
 
 export default () => (
     <Router history={browserHistory}>

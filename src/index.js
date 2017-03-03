@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { useStrict } from 'mobx';
 import { Provider } from 'mobx-react';
+import stores from 'common/stores';
 import Router from './router';
-import stores from './stores';
 
 useStrict(true);
 

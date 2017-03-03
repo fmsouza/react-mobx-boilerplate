@@ -1,9 +1,9 @@
 import React from 'react';
 import { inject, observer } from 'mobx-react';
 import { FormGroup, HelpBlock } from 'react-bootstrap';
-import Text from 'strings';
+import { Input, Button } from 'common/forms/inputs';
+import Text from 'common/strings';
 import './login.css';
-import { Input, Button } from 'forms/inputs';
 
 @inject('loginForm')
 @observer
