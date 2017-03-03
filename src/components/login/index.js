@@ -1,31 +1,40 @@
 import React from 'react';
-import { inject } from 'mobx-react';
+import { inject, observer } from 'mobx-react';
+import { FormGroup, HelpBlock } from 'react-bootstrap';
+import Text from 'strings';
 import './login.css';
-import { Input, Button } from './inputs';
+import { Input, Button } from 'forms/inputs';
 
-@inject('text')
+@inject('loginForm')
+@observer
 export class Login extends React.Component {
 
+    renderErrors(errors) {
+        return Object
+            .keys(errors)
+            .map(key => <p key={key}>{errors[key] || ''}</p>);
+    }
+
     render() {
-        const { title, inputs } = this.props.text.login;
+        const { loginForm } = this.props;
+        const { title, inputs } = Text.login;
+
         return (
-            <form className="login">
+            <form className="login" onSubmit={loginForm.onSubmit}>
                 <h1 className="center">{title}</h1>
-                <Input
-                    type="text"
-                    name="username"
-                    label={inputs.username.label}
-                    placeholder={inputs.username.placeholder}
-                />
-                <Input
-                    type="password"
-                    name="password"
-                    label={inputs.password.label}
-                    placeholder={inputs.password.placeholder}
-                />
-                <Button type="submit" block>
-                    {inputs.submitButton.label}
-                </Button>
+                <Input {...loginForm.$('username').bind()} />
+                <Input {...loginForm.$('password').bind()} />
+
+                <FormGroup className="center" validationState={"error"}>
+                    <Button
+                        type="submit"
+                        onClick={loginForm.onSubmit}
+                        block
+                    >
+                        {inputs.submitButton.label}
+                    </Button>
+                    <HelpBlock>{this.renderErrors(loginForm.errors())}</HelpBlock>
+                </FormGroup>
             </form>
         );
     }

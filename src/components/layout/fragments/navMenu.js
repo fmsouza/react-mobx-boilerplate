@@ -1,15 +1,15 @@
 import React from 'react';
-import { inject } from 'mobx-react';
 import { Nav, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import { incrementCounter, resetCounter } from '../../../actions';
+import { incrementCounter, resetCounter } from 'actions';
+import Text from 'strings';
 
-@inject('text')
+
 export class NavMenu extends React.Component {
 
     render() {
-        const { text, pullRight } = this.props;
-        const { increment, reset, login } = text.header.navmenu.link;
+        const { pullRight } = this.props;
+        const { increment, reset, login } = Text.header.navmenu.link;
         return (
             <Nav pullRight={pullRight}>
                 <NavItem onClick={incrementCounter}>{increment}</NavItem>

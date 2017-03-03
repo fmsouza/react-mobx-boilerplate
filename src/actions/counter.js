@@ -1,4 +1,7 @@
-import { counterStore } from '../stores';
+import Stores from 'stores';
+
+
+const { counterStore } = Stores;
 
 export const incrementCounter = () => counterStore.increment();
 

@@ -1,9 +1,7 @@
 import counterStore from './counterStore';
-import Strings from '../strings';
+import Forms from '../forms';
 
-const text = Strings.default;
-
-export {
+export default {
     counterStore,
-    text
+    ...Forms
 };

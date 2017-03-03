@@ -3,21 +3,22 @@ import { inject, observer } from 'mobx-react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from './logo.svg';
 import './home.css';
+import Text from 'strings';
 
-@inject('counterStore', 'text')
+@inject('counterStore')
 @observer
 export class Home extends React.Component {
 
     render() {
-        const { counterStore, text } = this.props;
+        const { counterStore } = this.props;
         return (
             <div className="Home">
                 <div className="Home-header">
                     <img src={logo} className="Home-logo" alt="logo" />
-                    <h2>{text.home.title}</h2>
+                    <h2>{Text.home.title}</h2>
                 </div>
                 <p className="Home-intro">
-                    {text.home.intro(counterStore.totalAmountOfClicks)}
+                    {Text.home.intro(counterStore.totalAmountOfClicks)}
                 </p>
             </div>
         );

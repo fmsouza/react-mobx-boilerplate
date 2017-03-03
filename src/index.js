@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { useStrict } from 'mobx';
 import { Provider } from 'mobx-react';
 import Router from './router';
-import * as stores from './stores';
+import stores from './stores';
 
 useStrict(true);
 
