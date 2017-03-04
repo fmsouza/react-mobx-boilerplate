@@ -29,17 +29,9 @@ export default {
     login: {
         title: 'Login',
         inputs: {
-            username: {
-                label: 'Usuário',
-                placeholder: 'ultralord@gmail.com'
-            },
-            password: {
-                label: 'Senha',
-                placeholder: '*********'
-            },
-            submitButton: {
-                label: 'Entrar'
-            }
+            username: 'Usuário',
+            password: 'Senha',
+            submitButton: 'Entrar'
         }
     }
 };
