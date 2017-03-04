@@ -11,5 +11,9 @@ export default [
         label: 'Password',
         placeholder: '*********',
         rules: 'required|string'
+    }, {
+        type: 'submit',
+        name: 'sendButton',
+        label: 'Submit'
     }
 ];
